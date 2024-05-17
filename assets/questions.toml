@@ -1,0 +1,10 @@
+[color]
+waiting = 0x00A9FF
+incorrect = 0xFF7676
+correct = 0x40A578
+
+[[question]]
+question = "What is the answer to the Ultimate Question of Life, the Universe, and Everything?"
+answer = 42
+incorrect_options = [39, "Science", 13, "Infinity", "Happiness", "Love"]
+explanation = "The Hitchhiker's Guide to the Galaxy"
