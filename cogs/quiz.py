@@ -80,8 +80,9 @@ async def start_quiz(
 
     async def send_new_question():
         # Send results if we don't have any more questions
-        if len(questions_left) == 0 and results:
-            await send_results()
+        if len(questions_left) == 0:
+            if results:
+                await send_results()
             return
 
         question = questions_left[0]
