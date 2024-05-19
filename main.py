@@ -43,6 +43,7 @@ async def setup_hook():
         await bot.load_extension(f"cogs.{cog[:-3]}")
         logging.info("Done loading %s", cog)
 
+    await bot.tree.sync()
     await bot.tree.sync(guild=discord.Object(env["DEV_GUILD_ID"]))
 
 
