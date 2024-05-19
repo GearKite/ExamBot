@@ -20,6 +20,7 @@ is a Discord bot that helps you study for math and english exams by giving you q
 1. Copy `.env.example` to `.env`
 1. Edit `.env` and add the required values
 1. Optionally, edit `config.toml` to add your own questions and personalize the bot
+1. Optionally, add a profile picture picture to your bot (`./assets/profile_picture.png`)
 
 ### Run it!
 
