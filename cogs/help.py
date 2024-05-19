@@ -1,5 +1,4 @@
 import tomllib
-from os import environ as env
 
 import discord
 from discord.app_commands import command
