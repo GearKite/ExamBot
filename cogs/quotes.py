@@ -22,7 +22,7 @@ class Quotes(commands.Cog):
     async def quote_command(self, interaction: discord.Interaction):
         quote = await self.get_quote()
 
-        if len(quote) > 255:
+        if len(quote) > 250:
             embed = discord.Embed(
                 description=f"**{quote['quote']}**", color=color["quiz_complete"]
             )
