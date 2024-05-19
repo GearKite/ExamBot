@@ -35,6 +35,12 @@ class Help(commands.Cog):
         )
 
         embed.add_field(
+            name="Inspiration",
+            value="""Get inspired by various people using `/quote`""",
+            inline=False,
+        )
+
+        embed.add_field(
             name="Available subjects",
             value=f"""You can choose between the following subjects:
             {'; '.join(questions.keys()).title()}""",
