@@ -206,4 +206,4 @@ class QuizQuestionView(discord.ui.View):
 
 
 async def setup(bot: commands.Bot):
-    await bot.add_cog(Quiz(bot), guilds=[discord.Object(env["DEV_GUILD_ID"])])
+    await bot.add_cog(Quiz(bot))
