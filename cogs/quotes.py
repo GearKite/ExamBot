@@ -33,12 +33,17 @@ class Quotes(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
     async def get_quote(self) -> dict:
+        if not env["QUOTES_API_KEY"]:
+            raise NoAPIKeyError(
+                "No API key was provided. This is expected if you left QUOTES_API_KEY blank."
+            )
+
         async with aiohttp.ClientSession() as session:
             async with session.get(
                 quotes["api"], headers={"X-Api-Key": env["QUOTES_API_KEY"]}
             ) as resp:
                 if resp.status != 200:
-                    raise CouldntGetQuoteException(f"{resp.status} - {resp.text}")
+                    raise CouldntGetQuoteError(f"{resp.status} - {resp.text}")
                 return (await resp.json())[0]
 
 
@@ -46,5 +51,9 @@ async def setup(bot: commands.Bot):
     await bot.add_cog(Quotes(bot))
 
 
-class CouldntGetQuoteException(Exception):
+class CouldntGetQuoteError(Exception):
     """Couldn't fetch a quote from the API"""
+
+
+class NoAPIKeyError(Exception):
+    "No API key was provided"
