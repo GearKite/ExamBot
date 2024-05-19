@@ -172,7 +172,12 @@ class QuizQuestionAnswerButton(discord.ui.Button):
                 title=f":x: {self.question['question']}", color=color["incorrect"]
             )
 
-        embed.add_field(name=r["explanation_label"], value=self.question["explanation"])
+        # Add explanation only for quiz or correct option in single question mode
+        if view.results or self.is_correct:
+            embed.add_field(
+                name=r["explanation_label"], value=self.question["explanation"]
+            )
+
         embed.set_footer(text=interaction.user.name)
         embed.timestamp = datetime.now()
 
