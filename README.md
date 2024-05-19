@@ -13,7 +13,7 @@ is a Discord bot that helps you study for math and english exams by giving you q
 
 ### Install dependencies
 
-`poetry install`
+`$ poetry install`
 
 ### Configure
 
@@ -26,15 +26,15 @@ is a Discord bot that helps you study for math and english exams by giving you q
 
 - Activate your virtual environment
 
-  1. `poetry shell`
+  1. `$ poetry shell`
 
   and start the bot
 
-  2. `python main.py`
+  2. `$ python main.py`
 
 - Or, without spawning a new shell:
 
-  1. `poetry run python main.py`
+  1. `$ poetry run python main.py`
 
 ## Usage
 
