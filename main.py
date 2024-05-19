@@ -1,7 +1,6 @@
+import logging
 import os
 from os import environ as env
-
-import logging
 
 import discord
 from discord.ext import commands
