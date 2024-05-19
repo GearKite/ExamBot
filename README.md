@@ -9,7 +9,7 @@ is a Discord bot that helps you study for math and english exams by giving you q
 ### Prerequisites
 
 - `Python >= 3.11`
-- `Python Poetry`
+- [Python Poetry](https://python-poetry.org/docs/)
 
 ### Install dependencies
 
