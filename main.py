@@ -17,7 +17,6 @@ except ImportError:
 load_dotenv()
 
 intents = discord.Intents.default()
-intents.message_content = True
 
 bot = commands.Bot(command_prefix=".", intents=intents, owner_id=env["OWNER_ID"])
 
@@ -25,12 +24,6 @@ bot = commands.Bot(command_prefix=".", intents=intents, owner_id=env["OWNER_ID"]
 @bot.event
 async def on_ready():
     logging.info("We have logged in as %s", bot.user)
-
-
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
 
 
 @bot.event
