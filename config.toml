@@ -7,6 +7,9 @@ quiz_complete = 0xE7D27C
 [quiz]
 lenght = 10
 
+[quotes]
+api = "https://api.api-ninjas.com/v1/quotes?category=inspirational"
+
 [strings]
 quiz_complete_embed_title = ":trophy: Quiz completed!"
 question_already_answered_error = "This question has already been answered."
